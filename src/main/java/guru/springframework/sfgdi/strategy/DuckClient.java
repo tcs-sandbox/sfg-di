@@ -16,9 +16,5 @@ public class DuckClient {
 		mallardDuck.fly();
 		System.out.println("Rubber Duck...");
 		rubberDuck.fly();
-		System.out.println("Mallard Duck that can't fly...");
-		Duck mallardWithNoFlying = new MallardDuck();
-		mallardWithNoFlying.setFlyBehavior(new NoFlyBehavior());
-		mallardWithNoFlying.fly();
 	}
 }

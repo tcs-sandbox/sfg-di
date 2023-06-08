@@ -1,21 +1,22 @@
 package guru.springframework.sfgdi.strategy;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component
 public class RubberDuck extends Duck {
 
-	@Autowired
-	private FlyBehavior rubberDuckFlyBehavior;
-	public RubberDuck(final FlyBehavior rubberDuckFlyBehavior) {
-		this.rubberDuckFlyBehavior = rubberDuckFlyBehavior;
+	private FlyBehavior noFlyBehavior;
+	public RubberDuck(final FlyBehavior noFlyBehavior) {
+
+		this.noFlyBehavior = noFlyBehavior;
 	}
 	@Override
 	public void fly() {
-		rubberDuckFlyBehavior.fly();
+
+		noFlyBehavior.fly();
 	}
 	@Override
-	public void setFlyBehavior(final FlyBehavior rubberDuckFlyBehavior) {
-		this.rubberDuckFlyBehavior = rubberDuckFlyBehavior;
+	public void setFlyBehavior(final FlyBehavior noFlyBehavior) {
+
+		this.noFlyBehavior = noFlyBehavior;
 	}
 }
